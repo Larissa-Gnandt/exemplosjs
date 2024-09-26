@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ordenando Valores</title>
+  </head>
+  <body>
+    <h1>Ordenando Valores</h1>
+
+    <div class="valor-container">
+      <p class="valor-titulo">Valor</p>
+      <input type="number" id="valor" />
+      <button onclick="add()">Adicionar</button>
+    </div>
+
+    <hr />
+
+    <div class="metodo-ordenacao-container">
+      <label for="tipoOrdenacao"></label>
+      <select id="tipoOrdenacao">
+        <option value="bubble">Bubble Sort</option>
+        <option value="selection">Selection Sort</option>
+        <option value="quick">Quick Sort</option>
+      </select>
+      <button onclick="ordenar()">Ordenar</button>
+      <button onclick="misturar()">Misturar</button>
+    </div>
+
+    <hr />
+
+    <ul id="valores"></ul>
+
+    <script src="ordenando.js"></script>
+
+    <script>
+      let listaValores = [];
+
+      function add() {
+        const campoValor = document.getElementById("valor");
+        const lista = document.getElementById("valores");
+
+        let item = document.createElement("li");
+        let texto = document.createTextNode(campoValor.value);
+        item.appendChild(texto);
+
+        lista.appendChild(item);
+
+        listaValores.push(parseInt(campoValor.value));
+
+        campoValor.value = "";
+      }
+
+      function ordenar() {
+        const listaValoresElement = document.getElementById("valores");
+        const tipoOrdenacaoElement = document.getElementById("tipoOrdenacao");
+
+        let vetor = Array.from(listaValoresElement.children).map(
+          (li) => parseInt(li.innerHTML) // Converter o conteúdo do item para inteiro
+        );
+
+        const indiceOrdenacao = tipoOrdenacaoElement.selectedIndex;
+        if (indiceOrdenacao === 0) {
+          bubble_sort(vetor);
+        } else if (indiceOrdenacao === 1) {
+          selection_sort(vetor);
+        } else if (indiceOrdenacao === 2) {
+          quick_sort(vetor, 0, vetor.length - 1);
+        }
+
+        listaValoresElement.innerHTML = vetor
+          .map((valor) => `<li>${valor}</li>`)
+          .reduce((acc, item) => acc + item, "");
+      }
+
+      function misturar() {
+        const listaValoresElement = document.getElementById("valores");
+
+        let vetor = Array.from(listaValoresElement.children).map((li) =>
+          parseInt(li.innerHTML)
+        );
+
+        shuffle(vetor, vetor.length * 2);
+
+        listaValoresElement.innerHTML = vetor
+          .map((valor) => `<li>${valor}</li>`)
+          .reduce((acc, item) => acc + item, "");
+      }
+    </script>
+  </body>
+</html>

@@ -1,10 +1,10 @@
 function getListaIngredientes(receita) {
-  let texto = "<ul>";
-  texto += receita.ingredientes
+  let listaNaoOrdenadaDeIngredientes = "<ul>";
+  listaNaoOrdenadaDeIngredientes += receita.ingredientes
     .map((ingrediente) => `<li>${ingrediente}</li>`)
     .join("");
-  texto += "</ul>";
-  return texto;
+  listaNaoOrdenadaDeIngredientes += "</ul>";
+  return listaNaoOrdenadaDeIngredientes;
 }
 
 function getCard(receita) {

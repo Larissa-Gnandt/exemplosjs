@@ -1,0 +1,36 @@
+.card-title {
+  font-size: 35px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  background-color: #0000001a;
+  margin-top: 10px;
+}
+
+.card-body {
+  font-size: 25px;
+}
+
+#pnlCatalogo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card {
+  flex: 1 1 300px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+}
+
+.card-img-top {
+  border-radius: 10px;
+}

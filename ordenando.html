@@ -9,37 +9,41 @@
 </head>
 
 <body>
-  <h1>Ordenando Valores</h1>
 
-  <div class="valor-container">
-    <p class="valor-titulo">Valor</p>
-    <input type="number" id="valor" />
-    <button onclick="add()">Adicionar</button>
-  </div>
+  <div class="container-principal">
+    <h1>Ordenando Valores</h1>
 
-  <hr />
-
-  <div class="metodo-ordenacao-container">
-    <div class="option-container">
-      <label for="tipoOrdenacao"></label>
-      <select id="tipoOrdenacao">
-        <option value="bubble">Bubble Sort</option>
-        <option value="selection">Selection Sort</option>
-        <option value="quick">Quick Sort</option>
-      </select>
+    <div class="valor-container">
+      <p class="valor-titulo">Valor</p>
+      <input type="number" id="valor" />
+      <button onclick="add()">Adicionar</button>
     </div>
 
-    <div class="button-group">
-      <button onclick="ordenar()">Ordenar</button>
-      <button onclick="misturar()">Misturar</button>
+    <hr />
+
+    <div class="metodo-ordenacao-container">
+      <div class="option-container">
+        <label for="tipoOrdenacao"></label>
+        <select id="tipoOrdenacao">
+          <option value="bubble">Bubble Sort</option>
+          <option value="selection">Selection Sort</option>
+          <option value="quick">Quick Sort</option>
+        </select>
+      </div>
+
+      <div class="button-group">
+        <button onclick="ordenar()">Ordenar</button>
+        <button onclick="misturar()">Misturar</button>
+      </div>
     </div>
+
+    <hr />
+
+    <ul id="valores"></ul>
+
   </div>
 
-  <hr />
-
-  <ul id="valores"></ul>
-
-  <script src="ordenando.js"></script>
+  <script src="./js/ordenando.js"></script>
 
   <script>
     let listaValores = [];

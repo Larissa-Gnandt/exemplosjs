@@ -1,3 +1,25 @@
+body h1 {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#text-dados {
+  color: white;
+  padding: 10px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.container-text-dados a {
+  color: white;
+}
+
+.container-text-dados a:hover {
+  color: rgba(181, 173, 173, 0.887);
+  text-decoration: none;
+}
+
 .row {
   margin: 0;
   padding: 0;
@@ -12,22 +34,6 @@
 
 .card {
   width: 100%;
-}
-
-#footer-text {
-  color: white;
-  padding: 10px;
-  font-size: 25px;
-  text-align: center;
-}
-
-footer a {
-  color: white;
-}
-
-body h1 {
-  font-size: 50px;
-  text-align: center;
 }
 
 .card-title {

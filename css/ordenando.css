@@ -5,9 +5,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-body h1 {
+h1 {
   font-size: 50px;
 }
 
@@ -36,14 +37,18 @@ body h1 {
 
 .valor-container input {
   width: 100%;
-  height: 40px;
+  height: 35px;
   font-size: 20px;
   margin-top: 10px;
   padding: 0;
 }
 
+input:focus {
+  outline: none;
+}
+
 .valor-container button {
-  width: 10%;
+  width: 120px;
   height: 40px;
   font-size: 20px;
   margin-top: 10px;
@@ -80,6 +85,10 @@ hr {
   padding: 0;
 }
 
+select:focus {
+  outline: none;
+}
+
 .button-group {
   display: flex;
   gap: 15px;
@@ -90,7 +99,7 @@ hr {
 }
 
 .button-group button {
-  width: 10%;
+  width: 120px;
   height: 40px;
   font-size: 20px;
   padding: 0;
@@ -102,6 +111,3 @@ hr {
 .button-group button:hover {
   background-color: rgb(13 110 253 / 90%);
 }
-
-/* TO DO */
-/* Fazer o media query para telas menores */

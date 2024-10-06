@@ -48,6 +48,13 @@
   <script>
     let listaValores = [];
 
+    document.getElementById("valor").addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        add();
+      }
+    });
+
+
     function add() {
       const campoValor = document.getElementById("valor");
       const lista = document.getElementById("valores");
@@ -68,7 +75,7 @@
       const tipoOrdenacaoElement = document.getElementById("tipoOrdenacao");
 
       let vetor = Array.from(listaValoresElement.children).map(
-        (li) => parseInt(li.innerHTML) // Converter o conteúdo do item para inteiro
+        (li) => parseInt(li.innerHTML)
       );
 
       const indiceOrdenacao = tipoOrdenacaoElement.selectedIndex;

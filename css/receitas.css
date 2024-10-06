@@ -1,27 +1,3 @@
-.card-title {
-  font-size: 35px;
-  color: black;
-  font-weight: bold;
-  text-align: center;
-}
-
-hr {
-  border: 0;
-  height: 2px;
-  background-color: #0000001a;
-  margin-top: 10px;
-}
-
-.card-body {
-  font-size: 25px;
-}
-
-#pnlCatalogo {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
 .card {
   flex: 1 1 300px;
   background-color: #f0f0f0;
@@ -33,4 +9,28 @@ hr {
 
 .card-img-top {
   border-radius: 10px;
+}
+
+.card-title {
+  font-size: 35px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-body {
+  font-size: 25px;
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  background-color: #0000001a;
+  margin-top: 10px;
+}
+
+#pnlCatalogo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }

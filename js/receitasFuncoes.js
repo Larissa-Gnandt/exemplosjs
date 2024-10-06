@@ -9,7 +9,7 @@ function getListaIngredientes(receita) {
 
 function getCard(receita) {
   return `
-        <div class="card" style="width: 250px;">
+        <div class="card" style="width: 250px">
             <img src="${receita.imagem}" class="card-img-top" alt="Imagem de ${
     receita.titulo
   }">
